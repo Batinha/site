@@ -1,133 +1,67 @@
-html {
-    background-color: black;
+* {
+  padding: 0;
+  margin:0;
 }
 
-#test {
+html {
+  background-color: rgb(12, 12, 12);
+}
+
+#header {
+  background-color: black;
+  padding: 2vw 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #logo {
-    font-family: 'Montserrat', sans-serif;
-    color: #A259FF;
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-top: 22px;
-    margin-left: 40px;
-    display: inline-flex;
-    text-decoration: none;
-}
-
-.botoes {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    position: absolute;
-    top: 20px;
-    left: 48.5%;
-    transform: translateX(-50%);
-    margin: 10px;
+  font-family: 'Montserrat', sans-serif;
+  color: #A259FF;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 10%;
+  flex-shrink: 0; /* não deixa encolher */
 }
 
 .botoes a {
-    font-family: 'Montserrat', sans-serif;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-left: 40px;
-}
-
-.botoes #loja {
-    text-decoration: underline;
-    text-decoration-thickness: 10%;
-    text-underline-offset: 15.5%;
-}
-.lupa {
-  position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 25.5px;
-    margin-right: 42px;
-    background: none;
-    border: none;
-    color: #A259FF;
-    border-radius: 5px;
-    padding-top: 3px;
-}
-
-.lupa:hover {
-  color: #7a3fff;
-}
-
-.lupa:active {
-  transform: translateY(2px);
-  color: #551aee;
-  animation: a-ripple .4s ease-in;
-}
-
-/*parte do efeito do botao*/
-.lupa {
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.lupa .ripple {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(162, 89, 255, 0.5);
-  width: 100px;
-  height: 100px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  animation: ripple-animation 600ms linear;
-  pointer-events: none;
-  opacity: 0.75;
-  z-index: 10;
-}
-
-@keyframes ripple-animation {
-  to {
-    transform: translate(-50%, -50%) scale(4);
-    opacity: 0;
-  }
-}
-
-#caixa-input {
-  position: absolute;
-  top: 28px;
-  right: 120px;
-  width: 200px;
-  padding: 8px 12px;
-  font-size: 16px;
   font-family: 'Montserrat', sans-serif;
-  color: white;
-  background-color: #11111173; /* cinza escuro */
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 10%;
+  text-decoration: none;
+  white-space: nowrap; /* evita quebra */
+}
 
+#pesquisa {
+  background: transparent;
   border: none;
-  border-bottom: 1.5px solid rgba(255, 255, 255, 0.2); /* traço sutil */
-  border-radius: 3px; /* quadrado */
-
-  outline: none;
-  box-shadow: none;
-  
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease, border-color 0.3s ease;
+  font-size: 24px;
+  color: #A259FF;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
-#caixa-input.show {
-  opacity: 1;
-  pointer-events: auto;
+#loja {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-#caixa-input:focus {
-  border-bottom: 1.5px solid rgba(162, 89, 255, 0.6); /* realce no foco */
+#contato {
+  position: absolute;
+  left: 40%;
+  transform: translateX(-40%);
 }
 
-header {
-    position: static;
+#carrinho {
+  position: absolute;
+  left: 60%;
+  transform: translateX(-60%);
 }
-
